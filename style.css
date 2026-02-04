@@ -38,7 +38,36 @@ main {
     padding: 0 1rem;
 }
 
-/* Recipe Container - Flexbox Grid */
+/* Controls (Part 2) */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.controls button {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #667eea;
+    color: white;
+}
+
+.controls button.active {
+    background-color: #667eea;
+    color: white;
+}
+
+/* Recipe Container */
 #recipe-container {
     display: flex;
     flex-wrap: wrap;
