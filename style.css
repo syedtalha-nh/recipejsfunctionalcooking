@@ -11,6 +11,13 @@ header {
   text-align: center;
 }
 
+header input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 400px;
+}
+
 .controls {
   padding: 1rem;
   text-align: center;
@@ -21,6 +28,11 @@ header {
   margin: 0.3rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+#recipeCounter {
+  text-align: center;
+  font-weight: bold;
 }
 
 #recipe-container {
@@ -34,17 +46,23 @@ header {
   background: white;
   padding: 1rem;
   border-radius: 8px;
+  position: relative;
 }
 
-.recipe-card h3 {
-  margin-top: 0;
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.favorite-btn.active {
+  color: red;
 }
 
 .toggle-btn {
-  margin-right: 0.5rem;
   margin-top: 0.5rem;
-  padding: 0.4rem 0.6rem;
-  cursor: pointer;
 }
 
 .steps-container,
@@ -53,18 +71,16 @@ header {
   margin-top: 0.5rem;
 }
 
-.steps-container.visible,
-.ingredients-container.visible {
+.visible {
   display: block;
-}
-
-.steps-container ul {
-  padding-left: 1.2rem;
-}
-
-.steps-container li {
-  margin-bottom: 0.3rem;
 }
 
 .step-level-1 { margin-left: 15px; }
 .step-level-2 { margin-left: 30px; }
+
+@media (max-width: 600px) {
+  header input {
+    width: 95%;
+  }
+}
+
