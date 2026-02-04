@@ -2,33 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RecipeJS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>🍳 RecipeJS</h1>
-    <p>Your functional cooking companion</p>
-  </header>
+<header>
+  <h1>🍳 RecipeJS</h1>
+  <p>Your functional cooking companion</p>
 
-  <section class="controls">
-    <button data-filter="all">All</button>
-    <button data-filter="easy">Easy</button>
-    <button data-filter="medium">Medium</button>
-    <button data-filter="hard">Hard</button>
-    <button data-filter="quick">Quick (&lt; 30 min)</button>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search recipes or ingredients..."
+  />
+</header>
 
-    <select id="sortSelect">
-      <option value="">Sort By</option>
-      <option value="name">Name</option>
-      <option value="time">Time</option>
-    </select>
-  </section>
+<section class="controls">
+  <button data-filter="all">All</button>
+  <button data-filter="easy">Easy</button>
+  <button data-filter="medium">Medium</button>
+  <button data-filter="hard">Hard</button>
+  <button data-filter="quick">Quick</button>
+  <button data-filter="favorites">❤️ Favorites</button>
 
-  <main id="recipe-container"></main>
+  <select id="sortSelect">
+    <option value="">Sort By</option>
+    <option value="name">Name</option>
+    <option value="time">Time</option>
+  </select>
+</section>
 
-  <script src="app.js"></script>
+<p id="recipeCounter"></p>
+
+<main id="recipe-container"></main>
+
+<script src="app.js"></script>
 </body>
 </html>
