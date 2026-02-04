@@ -138,3 +138,4 @@ sortButtons.forEach(btn => {
 // ============================
 updateDisplay();
 updateActiveButtons();
+
