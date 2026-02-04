@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeJS - Your Functional Cooking Companion</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RecipeJS</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <header>
-        <h1>🍳 RecipeJS</h1>
-        <p>Your Functional Cooking Companion</p>
-    </header>
+<header>
+  <h1>🍳 RecipeJS</h1>
+  <p>Your functional cooking companion</p>
 
-    <main>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search recipes or ingredients..."
+  />
+</header>
 
-        <!-- Controls Section (Part 2) -->
-        <div class="controls">
-            <div class="filter-buttons">
-                <button data-filter="all" class="active">Show All</button>
-                <button data-filter="easy">Easy</button>
-                <button data-filter="medium">Medium</button>
-                <button data-filter="hard">Hard</button>
-                <button data-filter="quick">Quick (&lt; 30 min)</button>
-            </div>
+<section class="controls">
+  <button data-filter="all">All</button>
+  <button data-filter="easy">Easy</button>
+  <button data-filter="medium">Medium</button>
+  <button data-filter="hard">Hard</button>
+  <button data-filter="quick">Quick</button>
+  <button data-filter="favorites">❤️ Favorites</button>
 
-            <div class="sort-buttons">
-                <button data-sort="none" class="active">Default</button>
-                <button data-sort="name">Name (A–Z)</button>
-                <button data-sort="time">Time (Fastest)</button>
-            </div>
-        </div>
+  <select id="sortSelect">
+    <option value="">Sort By</option>
+    <option value="name">Name</option>
+    <option value="time">Time</option>
+  </select>
+</section>
 
-        <!-- Recipe Cards -->
-        <div id="recipe-container">
-            <!-- Recipe cards will be rendered here by JavaScript -->
-        </div>
+<p id="recipeCounter"></p>
 
-    </main>
+<main id="recipe-container"></main>
 
-    <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
